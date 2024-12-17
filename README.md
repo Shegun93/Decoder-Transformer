@@ -52,10 +52,6 @@ The model consists of several key components:
 - Generated descriptions may not always be coherent.
 - Quality depends on training data and model complexity.
 
-## License
-
-[Specify your license here]
-
 ## Acknowledgements
 
 - TensorFlow and Keras teams
