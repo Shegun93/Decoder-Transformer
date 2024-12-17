@@ -1,63 +1,62 @@
-##Model Architecture
+# Model Architecture
+
 The model consists of several key components:
 
-TokenAndPositionEmbedding: Handles token and positional embeddings
-TransformerBlock: Custom Transformer block with multi-head attention
-Causal_Attn_Mask: Implements causal masking for auto-regressive generation
+- **TokenAndPositionEmbedding**: Handles token and positional embeddings.
+- **TransformerBlock**: Custom Transformer block with multi-head attention.
+- **Causal_Attn_Mask**: Implements causal masking for auto-regressive generation.
 
-Hyperparameters
+## Hyperparameters
 
-Maximum Sequence Length: 80 tokens
-Vocabulary Size: 10,000
-Embedding Dimension: 256
-Number of Attention Heads: 2
-Key Dimension: 256
-Feed Forward Dimension: 256
+- **Maximum Sequence Length**: 80 tokens
+- **Vocabulary Size**: 10,000
+- **Embedding Dimension**: 256
+- **Number of Attention Heads**: 2
+- **Key Dimension**: 256
+- **Feed Forward Dimension**: 256
 
-Dataset
+## Dataset
 
-Source: Wine Magazine Dataset (130k reviews)
-Preprocessing:
+- **Source**: Wine Magazine Dataset (130k reviews)
+  
+### Preprocessing:
+- Lowercased
+- Punctuation handling
+- Tokenization
 
-Lowercased
-Punctuation handling
-Tokenization
+## Training
 
+- **Optimizer**: Adam
+- **Loss Function**: Sparse Categorical Crossentropy
 
+### Callbacks:
+- Model Checkpointing
+- Early Stopping
+- TensorBoard Logging
 
-Training
+## Usage
 
-Optimizer: Adam
-Loss Function: Sparse Categorical Crossentropy
-Callbacks:
+1. Prepare your dataset
+2. Configure hyperparameters
+3. Train the model
+4. Generate wine descriptions
 
-Model Checkpointing
-Early Stopping
-TensorBoard Logging
+## Potential Improvements
 
+- Increase model complexity
+- Experiment with different hyperparameters
+- Implement more sophisticated text generation techniques
 
+## Limitations
 
-Usage
+- Generated descriptions may not always be coherent.
+- Quality depends on training data and model complexity.
 
-Prepare your dataset
-Configure hyperparameters
-Train the model
-Generate wine descriptions
+## License
 
-Potential Improvements
-
-Increase model complexity
-Experiment with different hyperparameters
-Implement more sophisticated text generation techniques
-
-Limitations
-
-Generated descriptions may not always be coherent
-Quality depends on training data and model complexity
-
-License
 [Specify your license here]
-Acknowledgements
 
-TensorFlow and Keras teams
-Wine Magazine for the dataset
+## Acknowledgements
+
+- TensorFlow and Keras teams
+- Wine Magazine for the dataset
