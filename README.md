@@ -1,4 +1,4 @@
-Model Architecture
+##Model Architecture
 The model consists of several key components:
 
 TokenAndPositionEmbedding: Handles token and positional embeddings
