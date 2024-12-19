@@ -28,7 +28,9 @@ The model consists of several key components:
 
 - **Optimizer**: Adam
 - **Loss Function**: Sparse Categorical Crossentropy
-
+### If you don't have a GPU, run the below command:
+```bash
+docker-compose up
 ### Callbacks:
 - Model Checkpointing
 - Early Stopping
