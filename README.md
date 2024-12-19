@@ -5,15 +5,15 @@ The model consists of several key components:
 - **TokenAndPositionEmbedding**: Handles token and positional embeddings.
 - **TransformerBlock**: Custom Transformer block with multi-head attention.
 - **Causal_Attn_Mask**: Implements causal masking for auto-regressive generation.
+### Installation
 
-## Hyperparameters
+```
+git clone https://github.com/Shegun93/Decoder-Transformer.git
+cd Decoder-Transformer
+pip install -r requirements.txt
 
-- **Maximum Sequence Length**: 80 tokens
-- **Vocabulary Size**: 10,000
-- **Embedding Dimension**: 256
-- **Number of Attention Heads**: 2
-- **Key Dimension**: 256
-- **Feed Forward Dimension**: 256
+```
+
 
 ## Dataset
 
