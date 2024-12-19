@@ -35,7 +35,7 @@ The model consists of several key components:
 - TensorBoard Logging
 ### How to Run the Code
 - if you don't have GPU, run the below command
-
+bash
   docker compose up
 
 
