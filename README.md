@@ -33,6 +33,9 @@ The model consists of several key components:
 - Model Checkpointing
 - Early Stopping
 - TensorBoard Logging
+### How to Run the Code
+- if you don't have GPU, run the below command
+  docker-compose up
 
 ## Usage
 
