@@ -6,7 +6,9 @@ services:
       context: .
       dockerfile: ./Docker/Dockerfile
     volumes:
-      - ./home/app:/app 
+      - ./GPT.ipynb:/app/GPT.ipynb
+      - ./Data:/app/Data
+      - ./checkpoint:/app/checkpoint
     ports:
       - "${JUPYTER_PORT}:${JUPYTER_PORT}"
       - "${TENSORBOARD_PORT}:${TENSORBOARD_PORT}"

@@ -1,39 +1,16 @@
 FROM tensorflow/tensorflow:2.15.0-gpu
 
-RUN apt-get update
-
-RUN pip install --upgrade pip
+RUN apt-get update && \
+    pip install --upgrade pip
 
 WORKDIR /app
 
-COPY ./ /app
+COPY ./requirements.txt /app
 
-RUN pip install -r requirements.txt
+RUN pip install -r /app/requirements.txt
+
+COPY ./GPT.ipynb /app
+COPY /Data/. /app/Data
+COPY /checkpoint/. /app/checkpoint
 
 ENV PYTHONPATH="${PYTHONPATH}:/app"
-
-
-
-
-# FROM ubuntu:20.04
-
-# ENV DEBIAN_FRONTEND noninteractive
-
-# RUN apt-get update
-# RUN apt-get install -y unzip graphviz curl musescore3 python3-pip
-
-# RUN pip install --upgrade pip
-
-# WORKDIR /app
-
-# COPY ./requirements.txt /app
-# RUN pip install -r /app/requirements.txt
-
-# # Hack to get around tensorflow-io issue - https://github.com/tensorflow/io/issues/1755
-# RUN pip install tensorflow-io
-# RUN pip uninstall -y tensorflow-io
-
-# COPY /notebooks/. /app/notebooks
-# COPY /scripts/. /app/scripts
-
-# ENV PYTHONPATH="${PYTHONPATH}:/app"
