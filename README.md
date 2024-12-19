@@ -7,7 +7,7 @@ The model consists of several key components:
 - **Causal_Attn_Mask**: Implements causal masking for auto-regressive generation
 
 ### Running it in local machine
-## Installation
+Installation
 
 ```
 git clone https://github.com/Shegun93/Decoder-Transformer.git
