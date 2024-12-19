@@ -36,6 +36,9 @@ The model consists of several key components:
 ### How to Run the Code
 - if you don't have GPU, run the below command
 
+  docker compose up
+
+
 ```docker-compose up ``` 
 ## Usage
 
