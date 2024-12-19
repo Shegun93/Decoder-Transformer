@@ -15,6 +15,16 @@ cd Decoder-Transformer
 pip install -r requirements.txt
 
 ```
+### Running with docker
+If you do not have GPU, run the below command
+```
+docker-compose up
+```
+
+if you want to run with GPU, run the below the command
+```
+docker-compose-gpu.yml up
+```
 
 
 ## Dataset
