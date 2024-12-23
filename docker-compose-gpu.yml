@@ -4,16 +4,19 @@ services:
   app:
     build: 
       context: .
-      dockerfile: ./Docker/Dockerfile
+      dockerfile: ./Docker/Dockerfile.gpu
     volumes:
-      - ./home/app:/app
+      - ./GPT.ipynb:/app/GPT.ipynb
+      - ./Data:/app/Data
+      - ./checkpoint:/app/checkpoint
     deploy:
       resources:
         reservations:
           devices:
-            - nvidia
-            count: 1
-            capabilities: [gpu] 
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    runtime: nvidia 
     ports:
       - "${JUPYTER_PORT}:${JUPYTER_PORT}"
       - "${TENSORBOARD_PORT}:${TENSORBOARD_PORT}"
