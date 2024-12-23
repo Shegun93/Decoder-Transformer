@@ -23,7 +23,7 @@ docker-compose up
 
 if you want to run with GPU, run the below the command
 ```
-docker-compose-gpu.yml up
+docker compose -f docker-compose-gpu.yml up
 ```
 ### .env file
 Before running the container, enusre you setup your .env file in the root directory
