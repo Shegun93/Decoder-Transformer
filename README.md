@@ -4,7 +4,7 @@ The model consists of several key components:
 
 - TokenAndPositionEmbedding: Handles token and positional embeddings.
 - TransformerBlock: A custom transformer block with multi-head attention.
-- **Causal_Attn_Mask**: Implements causal masking-masked future tokens
+- Causal_Attn_Mask: Implements causal masking to masked future tokens
 
 ### Running it in local machine
 Installation
